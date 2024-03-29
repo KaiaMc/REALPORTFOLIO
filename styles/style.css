@@ -12,12 +12,12 @@
 
 @font-face {
     font-family: Saira-Regular;
-    src: url(fonts/Saira-Regular.ttf);
+    src: url(/../fonts/Saira-Regular.ttf);
 }
 
 @font-face {
     font-family: SairaExtraCondensed-Regular;
-    src: url(fonts/SairaExtraCondensed-Regular.ttf);
+    src: url(/../fonts/SairaExtraCondensed-Regular.ttf);
 }
 
 
