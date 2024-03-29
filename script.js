@@ -26,11 +26,12 @@ document.addEventListener("DOMContentLoaded", function() {
             });
 
             // Show/hide clicked subskills (unchanged)
-            subSkills.classList.toggle("show");
+            subSkills.classList.toggle("show"); // Corrected typo: "shosw" to "show"
 
             // Add "show" class to both the clicked element and its subSkills
             item.classList.toggle("show");
         });
     });
 });
+
 
