@@ -1,16 +1,24 @@
-//enable hidden nav bar
 const nav = document.querySelector("nav");
 const cardContainer = document.querySelector(".cardContainer");
 let lastScrollY = cardContainer.scrollTop;
 
 cardContainer.addEventListener("scroll", () => {
-    if (lastScrollY < cardContainer.scrollTop) {
-        nav.classList.add("nav--hidden");
-    } else {
-        nav.classList.remove("nav--hidden");
+    const navUl = document.querySelector("#navUl.show");
+    
+    // Check if navUl with .show class is present
+    if (!navUl) {
+        // Proceed with scroll concealment enchantment only if navUl.show is not present
+        if (lastScrollY < cardContainer.scrollTop) {
+            nav.classList.add("nav--hidden");
+        } else {
+            nav.classList.remove("nav--hidden");
+        }
     }
+    
     lastScrollY = cardContainer.scrollTop;
 });
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const skillItems = document.querySelectorAll("#skillsList > li");
@@ -34,4 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function toggleNav() {
+    var navUl = document.getElementById('navUl');
+    navUl.classList.toggle('show');
+  }
+  
+  
 

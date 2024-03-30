@@ -12,12 +12,12 @@
 
 @font-face {
     font-family: Saira-Regular;
-    src: url(/../fonts/Saira-Regular.ttf);
+    src: url(../fonts/Saira-Regular.ttf);
 }
 
 @font-face {
     font-family: SairaExtraCondensed-Regular;
-    src: url(/../fonts/SairaExtraCondensed-Regular.ttf);
+    src: url(../fonts/SairaExtraCondensed-Regular.ttf);
 }
 
 
@@ -73,23 +73,23 @@ body{
 }
 
 .cardContainer {
-  position: fixed;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, min-content);
-  inset: 0px;
-  width: 80rem;
-  height: 47rem;
-  max-width: 70vw;
-  max-height: 100dvh;
-  margin: auto;
-  background-color: rgb(255, 255, 255);
-  border: 4px solid black;
-  border-radius: var(--border-radius);
-  box-shadow: 5px 5px 10px #000000a3;
-  z-index: 2;
-  overflow-y: scroll;
-  overflow-x: hidden;
+	position: fixed;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, min-content);
+	inset: 0px;
+	width: 80rem;
+	height: 47rem;
+	max-width: 70vw;
+	max-height: 100dvh;
+	margin: auto;
+	background-color: rgb(255, 255, 255);
+	border: 4px solid black;
+	border-radius: var(--border-radius);
+	box-shadow: 5px 5px 10px #000000a3;
+	z-index: 2;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 nav {
@@ -113,6 +113,10 @@ nav {
 	display: flex;
 	flex-flow: row nowrap;
 	gap: 6rem;
+}
+
+.nav-toggle{
+    display: none;
 }
 
 a{
@@ -146,6 +150,7 @@ a:hover{
 .titleContainer p {
 	height: fit-content;
 	padding: 15rem 0;
+	margin-bottom: 0rem;
 }
 
 .tagline{
@@ -176,13 +181,13 @@ a:hover{
 .about {
 	grid-column: 1 /span4;
 	grid-row: 4;
-    margin-top: 15rem;
-    margin-bottom: 10rem;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
+	margin-top: 30rem;
+	margin-bottom: 10rem;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
 }
 
 .about h1 {
@@ -191,16 +196,21 @@ a:hover{
 }
 
 .aboutImg{
-    width: 65%;
-    height: fit-content;
-    background-color: gray;
+    min-width: 80%;
+    min-height: 100%;
+    background-color: #1b1b1b;
     border-radius: var(--border-radius);
     border: 4px solid black;
+    background-image: url("../img/Self_Portrait_.png");
+    background-attachment: cover;
+    background-origin: border-box;
+    background-repeat: no-repeat;
 }
 
 article{
     width: 60%;
     font-size: 120%;
+    margin-bottom: 5rem;
 }
 
 
@@ -229,10 +239,23 @@ article{
     text-align: center;
 }
 
-.skills img, #contactImage {
+#contactImage {
 	width: 50%;
 	height: auto;
 	border-radius: var(--border-radius);
+    border: 4px solid black;
+}
+
+.skillsImg{
+    min-width: 30rem;
+    min-height: 100%;
+    margin: 2rem;
+    background-image: url("../img/Whatcanudo.jpg");
+    background-attachment: cover;
+    background-size: cover;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    border-radius: var(--border-radius);
     border: 4px solid black;
 }
 
@@ -315,12 +338,13 @@ ul a{
 #moreHeading {
 	grid-column: 1 /span 4;
 	justify-content: center;
-    margin-top: 5rem;
+	margin-top: 7rem;
 	grid-row: 6;
 	font-size: 4rem;
 	font-family: SairaExtraCondensed-Regular;
 	display: flex;
-    text-align: center;
+	text-align: center;
+	max-height: fit-content;
 }
 
 .imageContainer-1, .imageContainer-2 {
@@ -371,15 +395,132 @@ footer, *{
   }
 
 
-  /* responsive styles */
-@media (max-width: 900px) {
+  @media (max-width: 900px) {
     .cardContainer {
-        max-height: 100vh;
-        margin-bottom: 1.9rem;
-        height: 90%;
+        width: 80vw;
+        height: 97vh;
+    }
+    /* Conceal the conventional navigation container */
+    #navUl {
+      display: none;
+    }
+    
+    /* Reveal the magical button */
+    .nav-toggle {
+      display: flex;
+      justify-content: center;
+      background-color: transparent; /* Set background color to transparent initially */
+      border: none; /* Remove border for a cleaner appearance */
+      z-index: 100;
+    }
+  
+    .toggle-icon {
+      font-size: 39pt;
+    }
+  
+    /* Show the navigation ul when the button is toggled */
+    #navUl.show {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        font-size: 30pt;
+        background-color: #000000e7;
+        position: relative;
+        top: 30vh;
+        padding: 10rem;
+        left: 0;
+        width: 100%;
+        min-height: 99vh;
+    }
+
+    #navUl.show *{
+        color: white;
+    }
+
+    /* Adjust nav container to occupy full width when button is toggled */
+    nav {
+      width: 100%;
+      position: sticky;
+      top: -10px;
+      transition: none;
+    }
+
+    .scroll-down {
+        grid-column: 4 / 3;
+        text-align: left;
+        font-size: 20px;
+        text-decoration: none;
+        width: 15px;
+        height: 15px;
+        border-bottom: 2px solid #000000;
+        border-right: 2px solid #000000;
+        border-radius: 1px;
+        z-index: 9;
+        transform: translate(-50%, 0%);
+        animation: fade_move_down 4s ease-in-out infinite;
+      }
+
+    .aboutImg{
+        min-width: 80%;
+        min-height: 50%;
+        background-color: #1b1b1b;
+        border-radius: var(--border-radius);
+        border: 4px solid black;
+        background-image: url("../img/Self_Portrait_.png");
+        background-position: center;
+        background-attachment: cover;
+        background-origin: border-box;
+        background-repeat: no-repeat;
+    }
+
+    article{
+        width: 85%;
+        font-size: 130%;
+    }
+
+    .skillsImg{
+        min-width: 80%;
+        background-position: center;
+        min-height: 100%;
+    }
+
+    .more{
+        grid-column: 1 /span 4;
+        grid-row: 6;
+        margin-top: 55rem;
+        margin-bottom: 3rem;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #moreHeading {
+        grid-column: 1 /span 4;
+        justify-content: center;
+        margin-top: 47rem;
+        grid-row: 6;
+        font-size: 4rem;
+        font-family: SairaExtraCondensed-Regular;
+        display: flex;
+        text-align: center;
+        max-height: fit-content;
+    }
+
+  }
+
+@media (max-width: 1530px){
+    .more {
+        margin-top: 62rem;
+    }
+
+    #moreHeading {
+        margin-top: 50rem;
     }
 }
-
 
 @media (min-width: 3840px) {
     .cardContainer {
