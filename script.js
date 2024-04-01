@@ -47,5 +47,7 @@ function toggleNav() {
     navUl.classList.toggle('show');
   }
   
-  
-
+function toggleDropdown(){
+    var dropdownUl = document.getElementsByClassName('dropdown-content')[0];
+    dropdownUl.classList.toggle('show')
+}

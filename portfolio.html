@@ -21,13 +21,53 @@
 
         <div class="cardContainer">
 
+            <button class="nav-toggle" onclick="toggleNav()">
+                <span class="toggle-icon">&equiv;</span>
+              </button>
+
             <nav>
                 <ul id="navUl">
-                    <a href="index.html"><li>HOME</li></a>
-                    <a href="portfolio.html"><li>PORTFOLIO</li></a>
-                    <a href="contact.html"><li>CONTACT</li></a>
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="portfolio.html">PORTFOLIO</a></li>
+                  <li><a href="contact.html">CONTACT</a></li>
                 </ul>
-            </nav>
+              </nav>
+
+
+            <ul class="portfolioNav">
+                <a href="">
+                    <li>GAME DESIGN</li>
+                </a>
+                <a href="">
+                    <li>GRAPHIC DESIGN</li>
+                </a>
+                <a href="">
+                    <li>WEB DESIGN</li>
+                </a>
+                <a href="">
+                    <li>ILLUSTRATION</li>
+                </a>
+            </ul>
+
+            <div class="portfolioNav" id="dropdown">
+                <button class="link" onclick="toggleDropdown()" >Game Design <img src="img/arrowdown.svg" alt=""></button>
+                <ul class="dropdown-content">
+                        <a href="#">
+                            <li id="dropdownLink">Graphic Design</li>
+                        </a>
+                        <a href="#">
+                            <li id="dropdownLink">Web Design</li>
+                        </a>
+                        <a href="#">
+                            <li id="dropdownLink">Illustration</li>
+                        </a>
+                </ul>
+            </div>
+
+            <div class="imageContainer">
+
+            </div>
+
 
             <footer>
                 <p id="copyright">© 2024 Kaia O. McCombs</p>
