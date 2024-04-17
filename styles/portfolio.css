@@ -166,6 +166,21 @@ a:hover{
     opacity: 0; 
 }
 
+button{
+    background-color: white;
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+    margin: 0 1em;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+button:hover{
+    color: rgb(52, 129, 192);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 /* footer */
 
 footer{
@@ -211,12 +226,86 @@ footer, *{
 	grid-column: 1 /span 4;
 	min-width: 20rem;
 	min-height: 32rem;
-	background-color: #000000a3;
-	box-shadow: inset 0px 0px 5px black;
+	background-color: #d0d0d0a3;
+	box-shadow: inset 0px 0px 5px #cfcfcf;
 	margin: 0 3rem;
 	border-radius: var(--border-radius);
-    margin-top: 3rem;
+	margin-top: 3rem;
 }
+
+.portfolio-section{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-section div {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 1rem;
+	gap: 2rem;
+	justify-content: center;
+}
+
+div article h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+
+/* #action-container .action-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 88px;
+	height: 28px;
+	border: none;
+	border-radius: 3px;
+	color: #fff;
+	background-color: #fff;
+	font-size: 13px;
+	font-weight: bold;
+	font-family: Arial;
+	text-align: center;
+	cursor: pointer;
+}
+
+.embed-footer .info .counter {
+	margin-right: -86px;
+}
+
+.embed-footer .counter {
+	border-radius: 2.6px;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 1.19;
+	text-align: center;
+	color: #4a4a4a;
+	padding: 2px 8px;
+	height: 14px;
+}
+
+.embed-footer .embed-logo {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	min-width: 32%;
+}
+
+#logo-container {
+	max-width: 47%;
+	height: auto;
+}
+
+#logo-container {
+	max-width: 47%;
+	height: auto;
+} */
+
 
   /* responsive styles */
 @media (max-width: 900px) {

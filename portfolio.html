@@ -11,10 +11,6 @@
     <div class="hands-card">
 
         <img id="hand-front" src="img/hand_front.png" alt="">
-
-          
-        
-
         <img id="hand-back" src="img/hand_back.png" alt="">
 
     </div>
@@ -34,37 +30,86 @@
               </nav>
 
 
-            <ul class="portfolioNav">
-                <a href="">
-                    <li>GAME DESIGN</li>
-                </a>
-                <a href="">
-                    <li>GRAPHIC DESIGN</li>
-                </a>
-                <a href="">
-                    <li>WEB DESIGN</li>
-                </a>
-                <a href="">
-                    <li>ILLUSTRATION</li>
-                </a>
+              <ul class="portfolioNav">
+                <li>
+                    <button class="portfolios" onclick="showPortfolio('gamedesign-img')">GAME DESIGN</button>
+                </li>
+                <li>
+                    <button class="portfolios" onclick="showPortfolio('graphicdesign-img')">GRAPHIC DESIGN</button>
+                </li>
+                <li>
+                    <button class="portfolios" onclick="showPortfolio('webdesign-img')">WEB DESIGN</button>
+                </li>
+                <li>
+                    <button class="portfolios" onclick="showPortfolio('illustration-img')">ILLUSTRATION</button>
+                </li>
             </ul>
 
             <div class="portfolioNav" id="dropdown">
                 <button class="link" onclick="toggleDropdown()" >Game Design <img src="img/arrowdown.svg" alt=""></button>
                 <ul class="dropdown-content">
-                        <a href="#">
-                            <li id="dropdownLink">Graphic Design</li>
-                        </a>
-                        <a href="#">
-                            <li id="dropdownLink">Web Design</li>
-                        </a>
-                        <a href="#">
-                            <li id="dropdownLink">Illustration</li>
-                        </a>
+                        <button><li id="dropdownLink">Graphic Design</li>
+                        </button>
+
+                        <button><li id="dropdownLink">Web Design</li></button>
+
+                        <button><li id="dropdownLink">Illustration</li>
+                        </button>
                 </ul>
             </div>
 
             <div class="imageContainer">
+
+                <section class="gamedesign-img portfolio-section">
+                    <div id="project1">
+                        <blockquote class="imgur-embed-pub" lang="en" data-id="a/ksxfRH1" data-context="false"><a href="//imgur.com/a/ksxfRH1">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+                        <article>
+                            <h2>Name Of Project</h2>
+                            <p>description of project</p>
+                        </article>
+                    </div>
+                    <div id="project2">
+                        <blockquote class="imgur-embed-pub" lang="en" data-id="a/yLV8s3w" data-context="false"><a href="//imgur.com/a/yLV8s3w">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+                        <article>
+                            <h2>Name Of Project</h2>
+                            <p>description of project</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="graphicdesign-img portfolio-section">
+                    <div id="project1">
+                        <blockquote class="imgur-embed-pub" lang="en" data-id="a/0Efow1g" data-context="false"><a href="//imgur.com/a/0Efow1g">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+                        <article>
+                            <h2>Name Of Project</h2>
+                            <p>description of project</p>
+                        </article>
+                    </div>
+                    <div id="project2">
+                        <blockquote class="imgur-embed-pub" lang="en" data-id="a/2uNwHJm" data-context="false"><a href="//imgur.com/a/2uNwHJm">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+                        <article>
+                            <h2>Name Of Project</h2>
+                            <p>description of project</p>
+                        </article>
+
+                    <div id="project3">
+                        <blockquote class="imgur-embed-pub" lang="en" data-id="a/qktxYTF" data-context="false"><a href="//imgur.com/a/qktxYTF">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+                        <article>
+                            <h2>Name Of Project</h2>
+                            <p>description of project</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="illustration-img portfolio-section">
+                    <div id="project4">
+                        <blockquote class="imgur-embed-pub" lang="en" data-id="a/liRY8Hs" data-context="false"><a href="//imgur.com/a/liRY8Hs">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+                        <article>
+                            <h2>Name Of Project</h2>
+                            <p>description of project</p>
+                        </article>
+                    </div>
+                </section>
 
             </div>
 

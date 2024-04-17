@@ -51,3 +51,17 @@ function toggleDropdown(){
     var dropdownUl = document.getElementsByClassName('dropdown-content')[0];
     dropdownUl.classList.toggle('show')
 }
+
+function showPortfolio(sectionId) {
+    // Hide all portfolio sections
+    var portfolioSections = document.querySelectorAll('.portfolio-section');
+    portfolioSections.forEach(function(section) {
+        section.style.display = 'none';
+    });
+
+    // Show the selected portfolio section
+    var selectedSection = document.querySelector('.' + sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'flex';
+    }
+}
