@@ -224,8 +224,8 @@ footer, *{
 
 .imageContainer {
 	grid-column: 1 /span 4;
-	min-width: 20rem;
-	min-height: 32rem;
+/* 	min-width: 20rem;
+	min-height: 32rem; */
 	background-color: #d0d0d0a3;
 	box-shadow: inset 0px 0px 5px #cfcfcf;
 	margin: 0 3rem;
@@ -238,6 +238,7 @@ footer, *{
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 .portfolio-section div {
@@ -253,58 +254,6 @@ div article h2{
     margin-bottom: 2rem;
     margin-top: 1rem;
 }
-
-
-/* #action-container .action-button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 88px;
-	height: 28px;
-	border: none;
-	border-radius: 3px;
-	color: #fff;
-	background-color: #fff;
-	font-size: 13px;
-	font-weight: bold;
-	font-family: Arial;
-	text-align: center;
-	cursor: pointer;
-}
-
-.embed-footer .info .counter {
-	margin-right: -86px;
-}
-
-.embed-footer .counter {
-	border-radius: 2.6px;
-	font-size: 10px;
-	font-weight: bold;
-	line-height: 1.19;
-	text-align: center;
-	color: #4a4a4a;
-	padding: 2px 8px;
-	height: 14px;
-}
-
-.embed-footer .embed-logo {
-	display: flex;
-	justify-content: right;
-	align-items: center;
-	padding: 0;
-	margin: 0;
-	min-width: 32%;
-}
-
-#logo-container {
-	max-width: 47%;
-	height: auto;
-}
-
-#logo-container {
-	max-width: 47%;
-	height: auto;
-} */
 
 
   /* responsive styles */
@@ -366,10 +315,13 @@ div article h2{
 
       /* portfolio nav bar */
 
-    .portfolioNav{
+      .portfolioNav {
         display: none;
         background-color: none;
         box-shadow: none;
+        max-width: 100%;
+        justify-self: center;
+        max-height: 20%;
     }
 
     #dropdown {
@@ -379,7 +331,7 @@ div article h2{
         width: fit-content;
     }
 
-    .link{
+    .link {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -387,10 +339,10 @@ div article h2{
         padding: 1rem;
         gap: 10px;
         font-size: 110%;
-        width: 100%;
+        width: 120%;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
         border-radius: var(--border-radius);
-    }
+    }   
     
     .dropdown-content{
         list-style-type: none;
@@ -398,8 +350,11 @@ div article h2{
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
         border-radius: var(--border-radius);
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
         width: 76%;
-        padding: 0.50rem;
+        padding: 0.5rem;
         opacity: 0;
         pointer-events: none;
         transform: translateY(-10px);
@@ -410,6 +365,11 @@ div article h2{
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
+
+    }
+
+    .imageContainer{
+        margin-top: 0.5rem;
     }
     
 }
@@ -421,3 +381,5 @@ div article h2{
         height: 54vh;
     }
 }
+
+/* 1094 is when imgs break */

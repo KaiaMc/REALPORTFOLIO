@@ -42,14 +42,30 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Initially hide all portfolio sections
+    var portfolioSections = document.querySelectorAll('.portfolio-section');
+    portfolioSections.forEach(function(section) {
+        section.style.display = 'none';
+    });
+
+    // Show the "gamedesign-img" section
+    var gamedesignSection = document.querySelector('.gamedesign-img');
+    if (gamedesignSection) {
+        gamedesignSection.style.display = 'flex';
+    }
+
+    // Add event listeners or any other initialization code here...
+});
+
 function toggleNav() {
     var navUl = document.getElementById('navUl');
     navUl.classList.toggle('show');
-  }
-  
-function toggleDropdown(){
+}
+
+function toggleDropdown() {
     var dropdownUl = document.getElementsByClassName('dropdown-content')[0];
-    dropdownUl.classList.toggle('show')
+    dropdownUl.classList.toggle('show');
 }
 
 function showPortfolio(sectionId) {

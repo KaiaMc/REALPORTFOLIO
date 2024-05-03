@@ -139,6 +139,10 @@ nav {
 	gap: 6rem;
 }
 
+.nav-toggle{
+    display: none;
+}
+
 a{
     color: rgb(85, 85, 85);
     text-decoration: none;
@@ -156,6 +160,127 @@ a:hover{
     transform: translateY(-10rem); 
     opacity: 0; 
 }
+
+#mainHeading{
+    grid-column: 1 /span 4;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    grid-row: 5;
+    font-size: 4rem;
+    font-family: SairaExtraCondensed-Regular;
+    display: flex;
+    text-align: center;
+}
+
+
+.content {
+	grid-column: 1 /span 4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+    margin-bottom: 5rem;
+}
+
+.wrapper{
+    max-width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 10rem;
+}
+
+#wrapperImg {
+	background-image: url("/img/Self_Portrait_.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 110%;
+	min-width: 35%;
+}
+
+
+/* contact form styles */
+
+.container {
+	height: 100vh;
+
+}
+
+form{
+    width: 100%;
+}
+
+.form-group.position-relative {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: fit-content;
+}
+
+.articlecontainer {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.articlecontainer article{
+    text-align: justify;
+    padding-bottom: 0.9rem;
+    max-width: 90%;
+}
+
+#emailLink {
+	background-color: black;
+	color: white;
+	padding: .5rem 3rem;
+    margin-top: 0.8rem;
+}
+
+.form-group.message{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: fit-content;
+}
+
+#formName, #formEmail, #formMessage {
+	width: 90%;
+	padding: 0.5rem;
+	border: 1px solid black;
+	font-family: Saira-Regular;
+    font-size: 12pt;
+}
+
+.text-center {
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.btn.btn-primary {
+    font-weight: bold;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 3rem;
+    border: 0;
+    border-radius: 3rem;
+    transition: all 0.3s ease-in-out;
+    }
+
+.btn.btn-primary:hover:enabled {
+    box-shadow: 0 0.5em 0.5em -0.4em #1f1f1fba;
+    background-size: 100% 100%;
+    transform: translateY(-0.15em);
+    }
+
+
+
 
 /* footer */
 
@@ -177,14 +302,92 @@ footer, *{
 }
 
   /* responsive styles */
+
   @media (max-width: 900px) {
     .cardContainer {
-        max-height: 100vh;
-        margin-bottom: 1.9rem;
-        height: 90%;
+        width: 80vw;
+        height: 97vh;
+    }
+    /* Conceal the conventional navigation container */
+    #navUl {
+      display: none;
+    }
+    
+    /* Reveal the magical button */
+    .nav-toggle {
+      display: flex;
+      justify-content: center;
+      background-color: transparent; /* Set background color to transparent initially */
+      border: none; /* Remove border for a cleaner appearance */
+      z-index: 100;
+    }
+  
+    .toggle-icon {
+      font-size: 39pt;
+    }
+  
+    /* Show the navigation ul when the button is toggled */
+    #navUl.show {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        font-size: 30pt;
+        background-color: #000000e7;
+        position: relative;
+        top: 30vh;
+        padding: 10rem;
+        left: 0;
+        width: 100%;
+        min-height: 99vh;
+    }
+
+    #navUl.show *{
+        color: white;
+    }
+
+    /* Adjust nav container to occupy full width when button is toggled */
+    nav {
+      width: 100%;
+      position: sticky;
+      top: -10px;
+      transition: none;
+    }
+
+    .wrapper{
+        gap: 0;
+    }
+
+
+  }
+
+@media (max-width: 1164px){
+    .btn.btn-primary{
+        font-size: 90%;
+    }
+    .wrapper{
+        gap: 4rem;
     }
 }
 
+@media (max-width: 1530px){
+    .more {
+        margin-top: 62rem;
+    }
+
+    #moreHeading {
+        margin-top: 50rem;
+    }
+
+    #skillsheading{
+        margin-top: 10rem;
+    }
+
+    .skillsImg{
+        margin-top: 5rem;
+    }
+}
 
 @media (min-width: 3840px) {
     .cardContainer {

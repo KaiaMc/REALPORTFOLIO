@@ -389,12 +389,31 @@ ul a{
     border-radius: var(--border-radius);
 }
 
-.imageContainer-1 h2, .imageContainer-2 h2{
-    position: relative;
-    top: 4rem;
-    margin-top: 1rem;
-    font-size: 2rem;
-    font-family: SairaExtraCondensed-Regular;
+a h2{
+	position: relative;
+	left: 8.5rem;
+	margin-top: 1rem;
+	font-size: 2rem;
+	font-family: SairaExtraCondensed-Regular;
+}
+
+.imageContainer-1{
+    background-image: url(../img/Whatcanudo.jpg);
+    background-size: cover;
+    filter: blur(2px);
+    transition: all .2s ease;
+}
+
+.imageContainer-2{
+    background-image: url(../img/Self_Portrait_.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    transition: all .2s ease;
+}
+
+.imageContainer-1:hover, .imageContainer-2:hover{
+    filter: blur(0px);
 }
 
 /* footer */

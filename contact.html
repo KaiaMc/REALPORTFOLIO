@@ -21,21 +21,58 @@
 
         <div class="cardContainer">
 
+
+            <button class="nav-toggle" onclick="toggleNav()">
+                <span class="toggle-icon">&equiv;</span>
+              </button>
+
             <nav>
                 <ul id="navUl">
-                    <a href="index.html"><li>HOME</li></a>
-                    <a href="portfolio.html"><li>PORTFOLIO</li></a>
-                    <a href="contact.html"><li>CONTACT</li></a>
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="portfolio.html">PORTFOLIO</a></li>
+                  <li><a href="contact.html">CONTACT</a></li>
                 </ul>
-            </nav>
+              </nav>
 
+            <main class="content">
 
+                <h1 id="mainHeading">CONTACT|</h1>
 
-            
-
-
-
-
+                    <div class="wrapper">
+                        <div id="wrapperImg"></div>
+                        <div class="articlecontainer">
+                            <article>Contact me through the following email, or through the contact form below. Or, one can send visions directly to my body through divination if able.</article>
+                            <a id="emailLink" href="mailto:email.com" target="_blank">email.com</a>
+                            <form>
+                                    <!-- Name -->
+                                    <div class="form-group position-relative">
+                                        <label for="formName" class="d-block">
+                                            <i class="icon" data-feather="user"></i>
+                                        </label>
+                                        <input type="text" id="formName" class="form-control form-control-lg thick" placeholder="Name">
+                                    </div>
+                        
+                                    <!-- E-mail -->
+                                    <div class="form-group position-relative">
+                                        <label for="formEmail" class="d-block">
+                                            <i class="icon" data-feather="mail"></i>
+                                        </label>
+                                        <input type="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail">
+                                    </div>
+                        
+                                    <!-- Message -->
+                                    <div class="form-group message">
+                                        <textarea id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Message"></textarea>
+                                    </div>
+                                
+                                    <!-- Submit btn -->
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary" tabIndex="-1">Send message</button>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+            </main>
 
             <footer>
                 <p id="copyright">© 2024 Kaia O. McCombs</p>
