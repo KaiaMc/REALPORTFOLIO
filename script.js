@@ -20,6 +20,8 @@ cardContainer.addEventListener("scroll", () => {
     lastScrollY = cardContainer.scrollTop;
 });
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const skillItems = document.querySelectorAll("#skillsList > li");
 
@@ -28,15 +30,13 @@ document.addEventListener("DOMContentLoaded", function() {
             const subSkills = item.querySelector(".subSkills");
             const allSubSkills = document.querySelectorAll(".subSkills");
 
-            // Close all subskills (unchanged)
+            // Close 
             allSubSkills.forEach(skill => {
                 skill.classList.remove("show");
             });
 
-            // Show/hide clicked subskills (unchanged)
-            subSkills.classList.toggle("show"); // Corrected typo: "shosw" to "show"
-
-            // Add "show" class to both the clicked element and its subSkills
+            // Show/hide 
+            subSkills.classList.toggle("show");
             item.classList.toggle("show");
         });
     });
@@ -44,15 +44,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Define the toggleDropdown function within this event listener
     function toggleDropdown() {
         const dropdown = document.querySelector("#dropdown");
         const dropdownArrow = document.getElementById("dropdownArrow");
 
-        // Toggle .show class on the dropdown synchronously
         dropdown.classList.toggle("show");
-
-        // Toggle .rotate class on the dropdownArrow within the same synchronous block
         dropdownArrow.classList.toggle("rotate");
     }
 
@@ -70,6 +66,8 @@ function toggleDropdown() {
     dropdownUl.classList.toggle('show');
 }
 
+
+
 // Function to hide all portfolio sections except the specified one
 function showPortfolio(sectionId) {
     var portfolioSections = document.querySelectorAll('.portfolio-section');
@@ -77,12 +75,12 @@ function showPortfolio(sectionId) {
         section.style.display = 'none';
     });
     
-    // Show the selected portfolio section
     var selectedSection = document.querySelector('.' + sectionId);
     if (selectedSection) {
         selectedSection.style.display = 'flex';
     }
 }
+
 
 // Function to toggle visibility of elements based on screen width
 function toggleVisibility() {
@@ -90,24 +88,25 @@ function toggleVisibility() {
     var smallEmbeds = document.querySelectorAll('.embed-container-small');
     var largeEmbeds = document.querySelectorAll('.embed-container-large');
     
-    if (screenWidth > 1277) { // Adjust the screen width threshold as needed
+    if (screenWidth > 1277) { 
         // Hide small embeds and show large embeds
         smallEmbeds.forEach(function(embed) {
             embed.style.display = 'none';
         });
         largeEmbeds.forEach(function(embed) {
-            embed.style.display = 'flex'; // Or 'block', or whatever fits your layout
+            embed.style.display = 'flex'; 
         });
     } else {
         // Show small embeds and hide large embeds
         smallEmbeds.forEach(function(embed) {
-            embed.style.display = 'flex'; // Or 'block', or whatever fits your layout
+            embed.style.display = 'flex'; 
         });
         largeEmbeds.forEach(function(embed) {
             embed.style.display = 'none';
         });
     }
 }
+
 
 // Automatically hide all albums except game design after a delay on page load
 window.onload = function() {
@@ -122,3 +121,5 @@ window.onload = function() {
         window.addEventListener('resize', toggleVisibility);
     }, 800); // Adjust delay time as needed (in milliseconds)
 };
+
+

@@ -28,40 +28,34 @@
 	box-shadow: inset 0px 0px 5px #cfcfcf;
 	margin: 0 3rem;
 	border-radius: var(--border-radius);
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
 	margin-top: 3rem;
+	display: flex;
+	justify-content: space-around;
 }
 
 .imageContainer section{
-    padding: 4rem;
+    padding: 4rem 6rem;
     margin-top: 3rem;
     position: relative;
-    max-width: 48rem;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 3rem;
+    justify-content: space-between;
+    gap: 8rem;
 }
 
-.imageContainer section *{
-    object-fit: cover;
-    scroll-snap-align: start;
-}
-
-.embed-container-small{
-    display: flex;
-}
-
-.slider-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 23rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+.slider-nav {
+	display: flex;
+	position: absolute;
+	bottom: 94%;
+	left: 11%;
+	z-index: 1;
+	width: 78%;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .slider-nav a{
@@ -198,7 +192,7 @@ div article h2{
 
     #dropdownArrow {
         transform: rotate(0deg);
-        transition: transform 0.3s ease; /* Adjust duration and easing as needed */
+        transition: transform 0.4s ease-in-out; /* Adjust duration and easing as needed */
     }
     
     #dropdownArrow.rotate {
@@ -220,8 +214,20 @@ div article h2{
     }
 }
 
-/* @media (min-width: 1278px){
-    .embed-container-large{
+@media (max-width: 1278px){
+    .imageContainer {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .imageContainer section{
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .slider-nav{
         display: none;
     }
-} */
+}
