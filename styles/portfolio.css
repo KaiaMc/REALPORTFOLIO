@@ -1,204 +1,4 @@
-/* variables */
 
-
-
-:root{
-    --border-radius: 0.6rem;
-    --background-color: rgb(20, 20, 20);
-    --nav-height:50px;
-    padding-top: var(--nav-height);
-}
-
-
-@font-face {
-    font-family: Saira-Regular;
-    src: url(../fonts/Saira-Regular.ttf);
-}
-
-@font-face {
-    font-family: SairaExtraCondensed-Regular;
-    src: url(../fonts/SairaExtraCondensed-Regular.ttf);
-}
-
-
-/* css reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video, button{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-body{
-    font-family: Saira-Regular;
-    background-color: var(--background-color);
-    color: var(--background-color);
-    overflow: hidden;
-}
-
-
-.hands-card {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-}
-
-#hand-front {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 32vw;
-    z-index: 3;
-}
-
-#hand-back {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 32vw;
-}
-
-.cardContainer {
-	position: fixed;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(4, min-content);
-	inset: 0px;
-	width: 80rem;
-	height: 47rem;
-	max-width: 70vw;
-	max-height: 100dvh;
-	margin: auto;
-	background-color: rgb(255, 255, 255);
-	border: 4px solid black;
-	border-radius: var(--border-radius);
-	box-shadow: 5px 5px 10px #000000a3;
-	z-index: 2;
-	overflow-y: scroll;
-	overflow-x: hidden;
-}
-
-.nav-toggle{
-    display: none;
-}
-
-.nav--hidden{
-    transform: translateY(-10rem); 
-    opacity: 0; 
-}
-
-/* Width of the scrollbar */
-.cardContainer::-webkit-scrollbar,
-.cardContainer {
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: #161616 #f1f1f1; /* thumb and track color */
-}
-
-/* Track */
-.cardContainer::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-/* Handle */
-.cardContainer::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: var(--border-radius);
-}
-
-/* Handle on hover */
-.cardContainer::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-
-nav {
-	grid-column: 1 /span 4;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-content: center;
-	padding: 1rem 0;
-    width: 100%;
-    height: var(--nav-height);
-    background-color: white;
-    position: sticky;
-    top: 0px;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    opacity: 1;
-}
-
-#navUl {
-	list-style-type: none;
-	display: flex;
-	flex-flow: row nowrap;
-	gap: 6rem;
-}
-
-a{
-    color: rgb(85, 85, 85);
-    text-decoration: none;
-    margin: 0 1em;
-    font-weight: bold;
-    transition: transform 0.2s ease;
-}
-
-a:hover{
-    color: rgb(52, 129, 192);
-    transform: scale(1.1);
-}
-
-.nav--hidden{
-    transform: translateY(-10rem); 
-    opacity: 0; 
-}
-
-button{
-    background-color: white;
-    color: rgb(85, 85, 85);
-    text-decoration: none;
-    margin: 0 1em;
-    font-weight: bold;
-    transition: transform 0.2s ease;
-}
-
-button:hover{
-    color: rgb(52, 129, 192);
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-/* footer */
-
-footer{
-    grid-column: 2 /span 2;
-	grid-row: 9;
-    width: 100%;
-    height: 10vh;
-    margin: 8rem 0;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    color: gray;
-}
-
-footer, *{
-    margin-top: 3rem;
-}
 
 
 /* portfolio specific */
@@ -224,8 +24,6 @@ footer, *{
 
 .imageContainer {
 	grid-column: 1 /span 4;
-/* 	min-width: 20rem;
-	min-height: 32rem; */
 	background-color: #d0d0d0a3;
 	box-shadow: inset 0px 0px 5px #cfcfcf;
 	margin: 0 3rem;
@@ -233,25 +31,55 @@ footer, *{
 	margin-top: 3rem;
 }
 
-.portfolio-section{
+.imageContainer section{
+    padding: 4rem;
+    margin-top: 3rem;
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    display: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 3rem;
 }
 
-.portfolio-section div {
-	display: flex;
-	flex-flow: row wrap;
-	padding: 1rem;
-	gap: 2rem;
-	justify-content: center;
+.imageContainer section *{
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+.embed-container-small{
+    display: flex;
+}
+
+.slider-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 23rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrow1{
+    transform: rotate(90deg);
+}
+
+#arrow2{
+    transform: rotate(270deg);
 }
 
 div article h2{
     font-size: 2rem;
-    margin-bottom: 2rem;
     margin-top: 1rem;
 }
 
@@ -352,21 +180,31 @@ div article h2{
         text-align: center;
         display: flex;
         flex-direction: column;
-        gap: 1.3rem;
+        gap: 2rem;
         width: 76%;
-        padding: 0.5rem;
+        padding: 1rem 4rem;
+        margin: 1em;
         opacity: 0;
         pointer-events: none;
         transform: translateY(-10px);
         transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
     }
-    
+
     .dropdown-content.show{
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
-
     }
+
+    #dropdownArrow {
+        transform: rotate(0deg);
+        transition: transform 0.3s ease; /* Adjust duration and easing as needed */
+    }
+    
+    #dropdownArrow.rotate {
+        transform: rotate(180deg);
+    }
+    
 
     .imageContainer{
         margin-top: 0.5rem;
@@ -382,4 +220,8 @@ div article h2{
     }
 }
 
-/* 1094 is when imgs break */
+/* @media (min-width: 1278px){
+    .embed-container-large{
+        display: none;
+    }
+} */

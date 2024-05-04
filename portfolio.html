@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/portfolio.css">
     <script src="script.js" defer></script>
 </head>
@@ -46,55 +47,102 @@
             </ul>
 
             <div class="portfolioNav" id="dropdown">
-                <button class="link" onclick="toggleDropdown()" >Game Design <img src="img/arrowdown.svg" alt=""></button>
+                <button class="link" onclick="toggleDropdown()" >See Portfolio Sections <img id="dropdownArrow" src="img/arrowdown.svg" alt=""></button>
                 <ul class="dropdown-content">
-                        <button><li id="dropdownLink">Graphic Design</li>
-                        </button>
-
-                        <button><li id="dropdownLink">Web Design</li></button>
-
-                        <button><li id="dropdownLink">Illustration</li>
-                        </button>
+                    <li>
+                        <button class="portfolios" onclick="showPortfolio('gamedesign-img')">GAME DESIGN</button>
+                    </li>
+                    <li>
+                        <button class="portfolios" onclick="showPortfolio('graphicdesign-img')">GRAPHIC DESIGN</button>
+                    </li>
+                    <li>
+                        <button class="portfolios" onclick="showPortfolio('webdesign-img')">WEB DESIGN</button>
+                    </li>
+                    <li>
+                        <button class="portfolios" onclick="showPortfolio('illustration-img')">ILLUSTRATION</button>
+                    </li>
                 </ul>
             </div>
 
             <div class="imageContainer">
 
                 <section class="gamedesign-img portfolio-section">
+
                     <div id="project1">
-                        <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316670082" title="Modern Lawyer - Game Design"><img src="https://live.staticflickr.com/65535/53696321388_f80a4b3200_c.jpg" width="800" height="600" alt="Modern Lawyer - Game Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
                         <article>
                             <h2>Name Of Project</h2>
                             <p>description of project</p>
-                        </article>
+                        </article>      
+
+                        <div class="embed-container-large">
+                            <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316670082" title="Modern Lawyer - Game Design"><img src="https://live.staticflickr.com/65535/53696321388_f80a4b3200_c.jpg" width="800" height="600" alt="Modern Lawyer - Game Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div>
+
+                        <div class="embed-container-small">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316670082" title="Modern Lawyer - Game Design"><img src="https://live.staticflickr.com/65535/53696321388_f80a4b3200.jpg" width="500" height="375" alt="Modern Lawyer - Game Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div>
+
+<!--                         <div class="embed-container-extra-small">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316670082" title="Modern Lawyer - Game Design"><img src="https://live.staticflickr.com/65535/53696321388_f80a4b3200_n.jpg" width="320" height="240" alt="Modern Lawyer - Game Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div> -->
+
                     </div>
+
                     <div id="project2">
-                        <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316675551" title="Miku Game - Game Design"><img src="https://live.staticflickr.com/65535/53696326283_c6ece1a21b_c.jpg" width="800" height="600" alt="Miku Game - Game Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
                         <article>
                             <h2>Name Of Project</h2>
                             <p>description of project</p>
-                        </article>
+                        </article>                
+
+                        <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316675551" title="Miku Game - Game Design"><img src="https://live.staticflickr.com/65535/53696326283_c6ece1a21b_c.jpg" width="800" height="600" alt="Miku Game - Game Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
                     </div>
+
                 </section>
+                <div class="slider-nav">
+                    <a href="#project1"><img id="arrow1" src="img/arrowdown.svg" alt="">previous</a>
+                    <a href="#project2">next<img id="arrow2" src="img/arrowdown.svg" alt=""></a>
+                </div>
 
                 <section class="graphicdesign-img portfolio-section">
-                    <div id="project1">
-                        <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316671235" title="Stream Layout - Graphic Design"><img src="https://live.staticflickr.com/65535/53696414488_a297ac528f_z.jpg" width="640" height="480" alt="Stream Layout - Graphic Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+                    <div id="project3">
+
                         <article>
                             <h2>Name Of Project</h2>
                             <p>description of project</p>
-                        </article>
+                        </article> 
+
+                        <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316671235" title="Stream Layout - Graphic Design"><img src="https://live.staticflickr.com/65535/53696414488_a297ac528f_z.jpg" width="640" height="480" alt="Stream Layout - Graphic Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+                    </div>
+
+                    <div class="project4">
+
+                        <article>
+                            <h2>Name Of Project</h2>
+                            <p>description of project</p>
+                        </article> 
+
+
                     </div>
                 </section>
 
                 <section class="illustration-img portfolio-section">
-                    <div id="project4">
-                        <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316676746" title="Illustrations"><img src="https://live.staticflickr.com/65535/53696647170_fdbdd91b14_z.jpg" width="800" height="600" alt="Illustrations"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+                    <div id="project5">
+
                         <article>
                             <h2>Name Of Project</h2>
                             <p>description of project</p>
                         </article>
+
+                        <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316676746" title="Illustrations"><img src="https://live.staticflickr.com/65535/53696647170_fdbdd91b14_z.jpg" width="800" height="600" alt="Illustrations"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
                     </div>
+                    
                 </section>
 
             </div>
