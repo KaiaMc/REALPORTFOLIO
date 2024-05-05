@@ -39,7 +39,7 @@
 }
 
 #wrapperImg {
-	background-image: url("/img/Self_Portrait_.png");
+	background-image: url("../img/Self_Portrait_.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
