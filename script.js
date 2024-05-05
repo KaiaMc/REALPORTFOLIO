@@ -1,14 +1,18 @@
-/* on scroll down hide regular nav bar */
-
 const nav = document.querySelector("nav");
 const cardContainer = document.querySelector(".cardContainer");
 let lastScrollY = cardContainer.scrollTop;
 
-cardContainer.addEventListener("scroll", () => {
+// Function to check window width
+function checkWindowWidth() {
+    return window.innerWidth < 900; // Change 768 to your desired threshold
+}
+
+// Function to handle scroll event
+function handleScroll() {
     const navUl = document.querySelector("#navUl.show");
-    
+
     // Check if navUl with .show class is present
-    if (!navUl) {
+    if (!navUl && !checkWindowWidth()) {
         // Proceed with scroll concealment enchantment only if navUl.show is not present
         if (lastScrollY < cardContainer.scrollTop) {
             nav.classList.add("nav--hidden");
@@ -16,9 +20,25 @@ cardContainer.addEventListener("scroll", () => {
             nav.classList.remove("nav--hidden");
         }
     }
-    
+
     lastScrollY = cardContainer.scrollTop;
+}
+
+// Add scroll event listener
+cardContainer.addEventListener("scroll", handleScroll);
+
+// Add resize event listener to handle window size changes
+window.addEventListener("resize", () => {
+    // Reevaluate scroll event listener based on window width
+    if (checkWindowWidth()) {
+        // Remove scroll event listener if window width is less than threshold
+        cardContainer.removeEventListener("scroll", handleScroll);
+    } else {
+        // Add scroll event listener if window width is greater than or equal to threshold
+        cardContainer.addEventListener("scroll", handleScroll);
+    }
 });
+
 
 
 

@@ -48,14 +48,15 @@
 }
 
 .slider-nav {
-	display: flex;
-	position: absolute;
-	bottom: 94%;
-	left: 11%;
-	z-index: 1;
-	width: 78%;
-	justify-content: space-between;
-	align-items: center;
+    display: flex;
+    position: absolute;
+    bottom: 50%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .slider-nav a{
@@ -76,7 +77,6 @@ div article h2{
     font-size: 2rem;
     margin-top: 1rem;
 }
-
 
   /* responsive styles */
 @media (max-width: 900px) {

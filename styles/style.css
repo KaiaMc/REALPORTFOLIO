@@ -1,7 +1,5 @@
 
 
-
-
 /* variables */
 :root{
     --border-radius: 0.6rem;
@@ -56,6 +54,7 @@ body{
     position: relative;
     width: 100vw;
     height: 100vh;
+    pointer-events: none;
 }
 
 #hand-front {
@@ -92,6 +91,20 @@ body{
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+
+.blinking {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        visibility: visible;
+    }
+    50% {
+        visibility: hidden;
+    }
+}
+
 
 /* Width of the scrollbar */
 .cardContainer::-webkit-scrollbar,

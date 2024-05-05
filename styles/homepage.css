@@ -10,16 +10,18 @@
 
 .titleContainer p {
 	height: fit-content;
-	padding: 15rem 0;
 	margin-bottom: 0rem;
 }
 
-.tagline{
-    font-size: 3rem;
-    word-wrap: normal;
-    margin: 0 1.5rem;
-    text-align: center;
+.tagline {
+	font-size: 3rem;
+	word-wrap: normal;
+    margin-top: 16rem;
+	margin-bottom: 16rem;
+	text-align: center;
+	position: relative;
 }
+
 
 .scroll-down {
     grid-column: 4 / 3;
@@ -56,17 +58,17 @@
     font-family: SairaExtraCondensed-Regular;
 }
 
-.aboutImg{
-    min-width: 80%;
-    min-height: 100%;
-    background-color: #1b1b1b;
-    border-radius: var(--border-radius);
-    border: 4px solid black;
-    background-image: url("../img/Self_Portrait_.png");
-    background-attachment: cover;
-    background-position: center;
-    background-origin: border-box;
-    background-repeat: no-repeat;
+.aboutImg {
+	min-width: 78%;
+	min-height: 100%;
+	background-color: #1b1b1b;
+	border-radius: var(--border-radius);
+	border: 4px solid black;
+	background-image: url("../img/Self_Portrait_.png");
+	background-position: center;
+	background-origin: border-box;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 article{
@@ -81,7 +83,7 @@ article{
 .skills {
 	grid-column: 1 /span 4;
 	grid-row: 5;
-	margin-top: 14rem;
+	margin-top: 16rem;
 	margin-bottom: 3rem;
 	display: flex;
 	flex-flow: row wrap;
@@ -93,7 +95,7 @@ article{
 #skillsheading {
 	grid-column: 1 /span 4;
 	justify-content: center;
-    margin-top: 5rem;
+    margin-top: 10rem;
 	grid-row: 5;
 	font-size: 4rem;
 	font-family: SairaExtraCondensed-Regular;
@@ -278,7 +280,6 @@ footer, *{
     100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
   }
 
-
   @media (max-width: 900px) {
 
     /* Conceal the conventional navigation container */
@@ -326,6 +327,7 @@ footer, *{
       position: sticky;
       top: -10px;
       transition: none;
+      background-color: transparent;
     }
 
     .scroll-down {
@@ -349,14 +351,6 @@ footer, *{
     .aboutImg{
         min-width: 80%;
         min-height: 50%;
-        background-color: #1b1b1b;
-        border-radius: var(--border-radius);
-        border: 4px solid black;
-        background-image: url("../img/Self_Portrait_.png");
-        background-position: center;
-        background-attachment: cover;
-        background-origin: border-box;
-        background-repeat: no-repeat;
     }
 
     article{
@@ -375,22 +369,23 @@ footer, *{
         font-size: 3rem;
     }
 
-    .more{
-        grid-column: 1 /span 4;
-        grid-row: 6;
-        margin-top: 55rem;
-        margin-bottom: 3rem;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-    }
 
+  }
+@media (max-width: 484px){
+    #moreHeading {
+        margin-top: 27rem;
+    }
+    .more {
+        margin-top: 49rem;
+    }
+}
+
+
+@media (max-width: 1530px){
     #moreHeading {
         grid-column: 1 /span 4;
         justify-content: center;
-        margin-top: 47rem;
+        margin-top: 35rem;
         grid-row: 6;
         font-size: 4rem;
         font-family: SairaExtraCondensed-Regular;
@@ -398,25 +393,18 @@ footer, *{
         text-align: center;
         max-height: fit-content;
     }
-
-
-  }
-
-@media (max-width: 1530px){
     .more {
-        margin-top: 62rem;
-    }
-
-    #moreHeading {
-        margin-top: 50rem;
-    }
-
-    #skillsheading{
-        margin-top: 10rem;
-    }
-
-    .skillsImg{
-        margin-top: 5rem;
+        grid-column: 1 /span 4;
+        grid-row: 6;
+        margin-top: 42rem;
+        margin-bottom: 3rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
     }
 }
 

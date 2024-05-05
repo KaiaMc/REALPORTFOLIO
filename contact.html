@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/contact.css">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <div class="hands-card">
@@ -37,39 +39,48 @@
 
             <main class="content">
 
-                <h1 id="mainHeading">CONTACT|</h1>
+                <h1 id="mainHeading">CONTACT<span class="blinking">|</span></h1>
 
                     <div class="wrapper">
                         <div id="wrapperImg"></div>
                         <div class="articlecontainer">
                             <article>Contact me through the following email, or through the contact form below. Or, one can send visions directly to my body through divination if able.</article>
-                            <a id="emailLink" href="mailto:email.com" target="_blank">email.com</a>
-                            <form>
-                                    <!-- Name -->
+                            <a id="emailLink" href="mailto:kaiamccombsbusiness@gmail.com" target="_blank"><span class="material-symbols-outlined">
+                                mail
+                                </span>kaiamccombsbusiness@gmail.com</a>
+                            <hr id="line">
+                            <h2 id="contactHeading">Contact Form</h2>
+                            <form action="https://api.web3forms.com/submit" method="POST" class="contact">
+                                    
                                     <div class="form-group position-relative">
                                         <label for="formName" class="d-block">
                                             <i class="icon" data-feather="user"></i>
                                         </label>
-                                        <input type="text" id="formName" class="form-control form-control-lg thick" placeholder="Name">
+                                        <input type="hidden" name="access_key" value="36d4b111-5cb4-40dc-ba73-105a239085f4">
+                                        <input type="text" id="formName" name="name" class="form-control form-control-lg thick" placeholder="Name" required>
                                     </div>
-                        
+
                                     <!-- E-mail -->
                                     <div class="form-group position-relative">
                                         <label for="formEmail" class="d-block">
                                             <i class="icon" data-feather="mail"></i>
                                         </label>
-                                        <input type="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail">
+                                        <input type="email" id="formEmail" name="email" class="form-control form-control-lg thick" placeholder="E-mail" required>
                                     </div>
                         
                                     <!-- Message -->
                                     <div class="form-group message">
-                                        <textarea id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Message"></textarea>
+                                        <textarea id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Message" name="message" required></textarea>
                                     </div>
                                 
                                     <!-- Submit btn -->
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-primary" tabIndex="-1">Send message</button>
+                                        <button type="submit" class="btn btn-primary" tabIndex="-1">Send message <span class="material-symbols-outlined">
+                                            send
+                                            </span></button>
                                     </div>
+
+                                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                             </form>
                         </div>
                     </div>
