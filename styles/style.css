@@ -223,3 +223,9 @@ footer, *{
         height: 54vh;
     }
 }
+
+@media (max-height: 800px){
+    .cardContainer{
+        height: 90vh;
+    }
+}
