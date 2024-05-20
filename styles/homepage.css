@@ -351,6 +351,8 @@ footer, *{
     .aboutImg{
         min-width: 80%;
         min-height: 50%;
+        background-attachment: scroll;
+        background-size: cover;
     }
 
     article{
@@ -369,16 +371,18 @@ footer, *{
         font-size: 3rem;
     }
 
+    .imageContainer-1{
+        filter: none;
+    }
+    
+    .imageContainer-2{
+        filter: none;
+    }
+
+
 
   }
-@media (max-width: 484px){
-    #moreHeading {
-        margin-top: 27rem;
-    }
-    .more {
-        margin-top: 49rem;
-    }
-}
+
 
 
 @media (max-width: 1530px){
@@ -408,3 +412,8 @@ footer, *{
     }
 }
 
+@media (max-width: 484px){
+    #moreHeading {
+        margin-top: 30rem !important;
+    }
+}

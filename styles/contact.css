@@ -39,8 +39,8 @@
 }
 
 #wrapperImg {
-	background-image: url("../img/contactimg.jpg");
-    background-color: #1b1b1b;
+	background-image: url("../img/contactimg.png");
+    background-color: #000000;
 	border-radius: var(--border-radius);
 	border: 4px solid black;
 	background-repeat: no-repeat;

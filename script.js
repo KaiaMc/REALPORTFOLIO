@@ -108,6 +108,7 @@ function toggleVisibility() {
     var smallEmbeds = document.querySelectorAll('.embed-container-small');
     var largeEmbeds = document.querySelectorAll('.embed-container-large');
     
+
     if (screenWidth > 1277) { 
         // Hide small embeds and show large embeds
         smallEmbeds.forEach(function(embed) {
@@ -127,19 +128,41 @@ function toggleVisibility() {
     }
 }
 
-
+var loadingScreen = document.getElementById('loadingScreen');
 // Automatically hide all albums except game design after a delay on page load
 window.onload = function() {
     setTimeout(function() {
         // Hide portfolio sections
         showPortfolio('gamedesign-img');
-
+        /* get rid of loading screen */
+        loadingScreen.classList.toggle('done');
         // Call toggleVisibility to initially hide/show elements based on screen width
-        toggleVisibility();
-
+        toggleVisibility()
         // Add event listener for window resize to dynamically toggle visibility
         window.addEventListener('resize', toggleVisibility);
-    }, 800); // Adjust delay time as needed (in milliseconds)
+    }, 1000); // Adjust delay time as needed (in milliseconds)
 };
 
 
+let loadingText = document.getElementById('loadingText');
+
+let loadingTextOptions = [
+    'downloading random files off google..',
+    'please hold *elevator music*',
+    'stuffs loading hang on a sec',
+    'uhhhhhh umm uhh hh',
+    'so uh..come here often?',
+    'content loading... or is it?',
+    'hopefully everything is loading right...',
+    'wait. keep waiting. a bit more.',
+    'in life, its either load or be loaded',
+    'eivät liiku. odota. hyvä.',
+    'behind you! AHH! behind you! AHH!',
+]
+    let selectedText = loadingTextOptions[(Math.floor(Math.random() * loadingTextOptions.length))];
+
+    let activeText = document.createElement('p');
+    activeText.textContent = selectedText;
+    loadingText.innerHTML = '';
+
+    loadingText.appendChild(activeText);
