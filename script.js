@@ -140,9 +140,14 @@ window.onload = function() {
         toggleVisibility()
         // Add event listener for window resize to dynamically toggle visibility
         window.addEventListener('resize', toggleVisibility);
-    }, 1000); // Adjust delay time as needed (in milliseconds)
+    }, 1100); // Adjust delay time as needed (in milliseconds)
 };
 
+
+document.querySelector('.back-to-top').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector('.cardContainer').scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 let loadingText = document.getElementById('loadingText');
 
@@ -150,14 +155,16 @@ let loadingTextOptions = [
     'downloading random files off google..',
     'please hold *elevator music*',
     'stuffs loading hang on a sec',
-    'uhhhhhh umm uhh hh',
+    'uhh oh jeez uhh um fiddlesticks',
     'so uh..come here often?',
     'content loading... or is it?',
     'hopefully everything is loading right...',
     'wait. keep waiting. a bit more.',
     'in life, its either load or be loaded',
     'eivät liiku. odota. hyvä.',
+    'obtaining ip adress...',
     'behind you! AHH! behind you! AHH!',
+    "get in the car loser we're loading",
 ]
     let selectedText = loadingTextOptions[(Math.floor(Math.random() * loadingTextOptions.length))];
 

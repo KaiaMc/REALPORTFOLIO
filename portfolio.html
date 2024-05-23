@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="styles/portfolio.css">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body>                
+
+    <div id="loadingScreen">             
+        <img src="img/Rolling@1x-1.8s-200px-200px.gif" alt="">           
+        <p id="loadingText">kiaehnkilj</p>
+    </div>
+
     <div class="hands-card">
 
         <img id="hand-front" src="img/hand_front.png" alt="">
@@ -16,7 +22,7 @@
 
     </div>
 
-        <div class="cardContainer">
+        <div class="cardContainer" id="cardContainer">
 
             <button class="nav-toggle" onclick="toggleNav()">
                 <span class="toggle-icon">&equiv;</span>
@@ -65,18 +71,19 @@
             </div>     
             
 
-            <div class="imageContainer">
 
-                <div id="loadingScreen">
-                    <img src="img/sonic.gif" alt="">
-                    <p id="loadingText">kiaehnkilj</p>
-                </div>
+            <div class="imageContainer">
                 <section class="gamedesign-img portfolio-section">
                     <div id="gameproject1">
 
                         <article>
-                            <h2>Name Of Project</h2>
-                            <p>description of project</p>
+                            <h2>Modern Lawyer</h2>
+                            <p>“A quicktime puzzle game set in a future where everyone ​speaks in gen-Z slang. You, an out-of-touch lawyer, must ​now represent your client in a murder trial! However, they ​will only listen to you if you use their BASED lingo…”</p>
+                            <ul>
+                                <li>Entry for FGJ (Finnish Game Jam)Tampere 2024</li>
+                                <li>Made in a team with Kati Pörtfors & Mila Korpi</li>
+                                <li> My roles: Head programmer/UI designer, designed puzzles. ​Illustrated UI assets (backgrounds, menus, etc.) Assisted in ​illustrating some props.</li>
+                            </ul>
                         </article>      
 
                         <div class="embed-container-large">
@@ -92,8 +99,12 @@
                     <div id="gameproject2">
 
                         <article>
-                            <h2>Name Of Project</h2>
-                            <p>description of project</p>
+                            <h2>My Weird Valorant Duo</h2>
+                            <p>“Play as a loser who got got by some girl online ​who is freakishly obsessed with Miku, escaping ​the clutches of her perfectly clean and normal ​bedroom before she kills you or something. You ​just want to play more Valorant. ”</p>
+                            <ul>
+                                <li>Point-and-click browser-based timed puzzle strategy game</li>
+                                <li>Created Independently using Construct 3</li>
+                            </ul>
                         </article>                
 
                         <div class="embed-container-large">
@@ -115,8 +126,12 @@
                     <div id="graphicproject1">
 
                         <article>
-                            <h2>Name Of Project</h2>
-                            <p>description of project</p>
+                            <h2>AKristianGamer - Stream Assets</h2>
+                            <p>Created and Designed stream layout screens for streamer AKristianGamer, with multiple layouts for different required game caputure sizes/streaming needs</p>
+                            <ul>
+                                <li>Designed + Devloped layouts in collaboaration with client</li>
+                                <li>Roles/Skills used: Adobe Suite, OBS</li>
+                            </ul>
                         </article> 
 
                         <div class="embed-container-large">
@@ -132,11 +147,11 @@
                     <div id="graphicproject2">
 
                         <article>
-                            <h2>Name Of Project</h2>
-                            <p>description of project</p>
+                            <h2>K-pop - Fan Poster Designs</h2>
+                            <p>A series of poster designs/general layouts based off of various K-pop artists and albums. Made for fun over my free time</p>
                         </article> 
                             <div class="embed-container-large">
-                                <a data-flickr-embed="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316687347" title="Poster Designs - Graphic Design"><img src="https://live.staticflickr.com/65535/53698242194_36941cbf2f_c.jpg" width="800" height="600" alt="Poster Designs - Graphic Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                                <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316687347" title="Poster Designs - Graphic Design"><img src="https://live.staticflickr.com/65535/53698242194_36941cbf2f_z.jpg" width="640" height="480" alt="Poster Designs - Graphic Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
                             </div>
 
                             <div class="embed-container-small">
@@ -153,12 +168,16 @@
                     <div id="webproject1">
 
                         <article>
-                            <h2>Name Of Project</h2>
-                            <p>description of project</p>
+                            <h2>Website Redsign - Koneko</h2>
+                            <p>Redesigned the website of Koneko and implimented it into a wordpress theme</p>
+                            <ul>
+                                <li>Redesigned 3 pages from the original website to improve user experience + increase visual appeal</li>
+                                <li>Intergrated into wordpress for easy editing on client side</li>
+                            </ul>
                         </article> 
 
                         <div class="embed-container-large">
-                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316688270" title="Website Redesign - Web Design"><img src="https://live.staticflickr.com/65535/53698122578_07db19d90b_c.jpg" width="800" height="600" alt="Website Redesign - Web Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                            <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316688270" title="Website Redesign - Web Design"><img src="https://live.staticflickr.com/65535/53698122578_07db19d90b_z.jpg" width="640" height="480" alt="Website Redesign - Web Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
                         </div>
 
                         <div class="embed-container-small">
@@ -170,16 +189,20 @@
                     <div id="webproject2">
 
                         <article>
-                            <h2>Name Of Project</h2>
-                            <p>description of project</p>
+                            <h2>TARINA RY</h2>
+                            <p>Designed, developed, and intergrated the TARINA RY website, a student organization based in Tampere</p>
+                            <ul>
+                                <li>Created a mockup in Figma</li>
+                                <li>Developed the website for easy wordpress intergration</li>
+                            </ul>
                         </article> 
 
                         <div class="embed-container-large">
-                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316671200" title="Bookmarks - Web Design"><img src="https://live.staticflickr.com/65535/53696483169_30bcc8563f_c.jpg" width="800" height="600" alt="Bookmarks - Web Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                            <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720317237517" title="Web Design - TARINA"><img src="https://live.staticflickr.com/65535/53741061292_85cf720218_z.jpg" width="640" height="480" alt="Web Design - TARINA"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
                         </div>
 
                         <div class="embed-container-small">
-                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316671200" title="Bookmarks - Web Design"><img src="https://live.staticflickr.com/65535/53696483169_30bcc8563f_w.jpg" width="400" height="300" alt="Bookmarks - Web Design"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                            <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720317237517" title="Web Design - TARINA"><img src="https://live.staticflickr.com/65535/53741061292_85cf720218_n.jpg" width="320" height="240" alt="Web Design - TARINA"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
                         </div>    
 
                     </div>                
@@ -192,19 +215,34 @@
 
                     <div id="illusproject1">
 
-                        <article>
-                            <h2>Name Of Project</h2>
-                            <p>description of project</p>
+                        <article id="illus">
+                            <h2>2D Illustrations</h2>
+                            <p>a collection of various illustrative works/projects!</p>
                         </article>
 
                         <div class="embed-container-large">
-                            <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316676746" title="Illustrations"><img src="https://live.staticflickr.com/65535/53696647170_fdbdd91b14_z.jpg" width="800" height="600" alt="Illustrations"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316676746" title="Illustrations"><img src="https://live.staticflickr.com/65535/53696647170_fdbdd91b14_z.jpg" width="800" height="600" alt="Illustrations"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
                         </div>
 
                         <div class="embed-container-small">
                             <a data-flickr-embed="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720316676746" title="Illustrations"><img src="https://live.staticflickr.com/65535/53696647170_fdbdd91b14_n.jpg" width="400" height="300" alt="Illustrations"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
                         </div>
                     </div>
+
+                    <div id="illusproject2">
+
+                        <article id="illus">
+                            <h2>Tea Party - 3D</h2>
+                            <p>an assortment of strawbery themed sweets! inspired by ps1/low poly graphics</p>
+                        </article>
+
+                        <div class="embed-container-large">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720317256719" title="Illustration - 3D work"><img src="https://live.staticflickr.com/65535/53742350674_6387c4f13d_c.jpg" width="800" height="600" alt="Illustration - 3D work"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div>
+
+                        <div class="embed-container-small">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/200607178@N04/albums/72177720317256719" title="Illustration - 3D work"><img src="https://live.staticflickr.com/65535/53742350674_6387c4f13d_n.jpg" width="320" height="240" alt="Illustration - 3D work"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div>
 
 
                 </section>
@@ -216,7 +254,7 @@
 
             <footer>
                 <p id="copyright">© 2024 Kaia O. McCombs</p>
-                <a href="">
+                <a href="#" class="back-to-top">
                     <p>Back to top</p>
                 </a>
             </footer>

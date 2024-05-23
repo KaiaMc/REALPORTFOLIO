@@ -36,28 +36,31 @@
 	justify-content: space-around;
 }
 
-.imageContainer section{
-    padding: 4rem 6rem;
-    margin-top: 3rem;
-    position: relative;
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 8rem;
+.imageContainer section {
+	padding: 4rem 6rem;
+	margin-top: 3rem;
+	position: relative;
+	max-width: 92%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	gap: 2em;
 }
 
 #loadingScreen {
-	position: absolute;
-    padding-top: 12rem;
+	position: fixed;
+    top: 0;
+    left: 0;
     font-size: 130%;
 	width: 100%;
-	min-height: 120%;
-	background: #fffffffd;
+	min-height: 100%;
+	background: #1a1a1a;
+    color: #cfcfcf;
 	display: flex;
     flex-direction: column;
 	align-items: center;
-	z-index: 9999;
+    justify-content: center;
+	z-index: 9999 !important;
     pointer-events: none;
 	transition: opacity 0.5s ease;
 }
@@ -67,7 +70,7 @@
 }
 
 #loadingScreen img {
-	width: 10%;
+	width: 6%;
 	height: 50%;
 	filter: drop-shadow(0px 8px 7px #b0b0b0);
 }
@@ -98,9 +101,42 @@
     transform: rotate(270deg);
 }
 
+.gameproject1{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+	display: flex;
+	flex-flow: column;
+	height: auto;
+	justify-content: center;
+	align-items: center;
+	max-width: 76%;
+	position: relative;
+	left: 6em;
+    min-height: 35%;
+}
+
+#illus{
+    min-height: auto;
+}
+
+p, article ul {
+    margin: 1em 0;
+	text-wrap: auto;
+    text-align: justify;
+}
+
 div article h2{
     font-size: 2rem;
     margin-top: 1rem;
+}
+
+div *{
+    justify-content: center;
 }
 
   /* responsive styles */
@@ -254,5 +290,10 @@ div article h2{
 
     .slider-nav{
         display: none;
+    }
+
+    article {
+        left: 0;
+        max-width: fit-content;
     }
 }

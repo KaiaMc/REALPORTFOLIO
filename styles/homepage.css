@@ -139,6 +139,8 @@ article{
 	gap: 1rem;
 	width: initial;
 	height: fit-content;
+	max-width: 90%;
+	text-wrap: auto;
 }
 
 #graphicdesign, #illus, #gamedev, #webdev {
@@ -379,28 +381,26 @@ footer, *{
         filter: none;
     }
 
-
+    #moreHeading {
+        margin-top: 30rem !important;
+    }
+    .more {
+        margin-top: 38rem !important;
+    }
 
   }
 
 
 
-@media (max-width: 1530px){
+@media (max-width: 1529px){
     #moreHeading {
-        grid-column: 1 /span 4;
-        justify-content: center;
-        margin-top: 35rem;
-        grid-row: 6;
-        font-size: 4rem;
-        font-family: SairaExtraCondensed-Regular;
+        margin-top: 40rem;
         display: flex;
         text-align: center;
         max-height: fit-content;
     }
     .more {
-        grid-column: 1 /span 4;
-        grid-row: 6;
-        margin-top: 42rem;
+        margin-top: 48rem;
         margin-bottom: 3rem;
         margin-left: 2rem;
         margin-right: 2rem;
