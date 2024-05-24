@@ -140,7 +140,7 @@ window.onload = function() {
         toggleVisibility()
         // Add event listener for window resize to dynamically toggle visibility
         window.addEventListener('resize', toggleVisibility);
-    }, 1100); // Adjust delay time as needed (in milliseconds)
+    }, 2000); // Adjust delay time as needed (in milliseconds)
 };
 
 
