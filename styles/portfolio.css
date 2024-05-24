@@ -120,10 +120,6 @@ article {
     min-height: 35%;
 }
 
-#illus{
-    min-height: auto;
-}
-
 p, article ul {
     margin: 1em 0;
 	text-wrap: auto;
