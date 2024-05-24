@@ -122,7 +122,7 @@ article {
 
 p, article ul {
     margin: 1em 0;
-	text-wrap: auto;
+	word-wrap: break-word; /* Use word-wrap for text wrapping */
     text-align: justify;
 }
 
